@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Finca Son Creixell - Casa Antigua del Siglo XVII en Sineu, Mallorca</title>
+    <meta name="description" content="Descubra Finca Son Creixell, una joya del siglo XVII totalmente renovada en el corazón de una finca de 70 hectáreas en Sineu, Mallorca. 4 habitaciones, piscina privada y naturaleza."/>
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="Finca Son Creixell - Sineu, Mallorca">
+    <meta property="og:description" content="Joya rústica del siglo XVII en una finca de 70 hectáreas. 4 habitaciones, piscina privada y privacidad absoluta.">
+    <meta property="og:image" content="https://fincasoncreixell.com/img/fachada_dia.jpg">
+    <meta property="og:url" content="https://fincasoncreixell.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body class="bg-background-light font-sans text-slate-900 leading-relaxed overflow-hidden">
+<!-- Preloader -->
+<div id="preloader">
+    <div class="preloader-brand">SON CREIXELL</div>
+</div>
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+
+<!-- Navigation -->
+<header id="main-nav" class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 py-4 md:px-20 lg:px-40 bg-white/90 backdrop-blur-md sticky top-0 z-50 transition-shadow duration-300">
+    <a href="index.html" class="flex items-center gap-3 text-primary no-underline">
+        <span class="material-symbols-outlined text-3xl">foundation</span>
+        <h2 class="text-slate-900 text-xl font-bold leading-tight tracking-[-0.015em]">Finca Son Creixell</h2>
+    </a>
+    <div class="flex flex-1 justify-end gap-8 items-center">
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="nav-link active text-slate-700 text-sm font-medium hover:text-primary transition-colors" href="index.html">Inicio</a>
+            <a class="nav-link text-slate-700 text-sm font-medium hover:text-primary transition-colors" href="galeria.html">Galería</a>
+            <a class="nav-link text-slate-700 text-sm font-medium hover:text-primary transition-colors" href="ubicacion.html">Ubicación</a>
+            <a class="nav-link text-slate-700 text-sm font-medium hover:text-primary transition-colors" href="reserva.html">Reservas</a>
+        </nav>
+        <a href="reserva.html" class="hidden sm:flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 active:scale-95 no-underline">
+            <span>Reservar Ahora</span>
+        </a>
+        <!-- Mobile hamburger -->
+        <button id="mobile-toggle" class="md:hidden flex items-center justify-center size-10 rounded-lg hover:bg-primary/10 transition-colors">
+            <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+    </div>
+</header>
+
+<!-- Mobile menu overlay -->
+<div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/50 z-[60]"></div>
+<div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-white shadow-2xl z-[70] p-8 flex flex-col gap-6">
+    <div class="flex justify-between items-center mb-4">
+        <span class="text-lg font-bold text-primary">Menú</span>
+        <button id="mobile-close" class="size-10 flex items-center justify-center rounded-lg hover:bg-primary/10">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+    <a href="index.html" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/10 text-primary font-bold no-underline">
+        <span class="material-symbols-outlined">home</span> Inicio
+    </a>
+    <a href="galeria.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-slate-700 font-medium no-underline">
+        <span class="material-symbols-outlined">photo_library</span> Galería
+    </a>
+    <a href="ubicacion.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-slate-700 font-medium no-underline">
+        <span class="material-symbols-outlined">location_on</span> Ubicación
+    </a>
+    <a href="reserva.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-slate-700 font-medium no-underline">
+        <span class="material-symbols-outlined">calendar_today</span> Reservas
+    </a>
+    <div class="mt-auto">
+        <a href="reserva.html" class="flex items-center justify-center w-full py-3 bg-primary text-white font-bold rounded-lg no-underline">Reservar Ahora</a>
+    </div>
+</div>
+
+<main class="flex flex-col flex-1">
+
+<!-- Hero Section -->
+<section class="p-4 md:px-20 lg:px-40 fade-in">
+    <div class="@container">
+        <div class="relative flex min-h-[600px] flex-col gap-6 bg-cover bg-fixed bg-center bg-no-repeat rounded-xl items-center justify-center p-6 text-center overflow-hidden" style='background-image: linear-gradient(rgba(34, 22, 16, 0.4) 0%, rgba(34, 22, 16, 0.7) 100%), url("img/fachada.jpg");'>
+            <div class="max-w-3xl flex flex-col gap-4">
+                <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-6xl">Finca Son Creixell: Tradición y Relax</h1>
+                <p class="text-white/90 text-lg font-normal md:text-xl">Descubra una joya del siglo XVII totalmente renovada en el corazón de una finca de 70 hectáreas en Sineu.</p>
+                <div class="mt-4 flex flex-wrap gap-4 justify-center">
+                    <a href="reserva.html" class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-primary text-white text-lg font-bold shadow-lg hover:shadow-primary/20 transition-all hover:-translate-y-1 no-underline">
+                        <span>Consultar Disponibilidad</span>
+                    </a>
+                    <a href="galeria.html" class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white text-lg font-bold hover:bg-white/20 transition-all no-underline">
+                        <span>Ver Galería</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Cards -->
+<section class="px-6 py-12 md:px-20 lg:px-40">
+    <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-2 fade-in">
+            <h2 class="text-slate-900 text-3xl font-bold leading-tight tracking-tight">Su Refugio Histórico</h2>
+            <div class="h-1 w-20 bg-primary rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="fade-in flex flex-col gap-3 rounded-xl p-8 border border-primary/10 bg-white shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-default">
+                <span class="material-symbols-outlined text-primary text-4xl">bed</span>
+                <div>
+                    <p class="text-slate-500 text-sm font-medium uppercase tracking-wider">Alojamiento</p>
+                    <p class="text-slate-900 text-2xl font-bold">4 Habitaciones</p>
+                </div>
+            </div>
+            <div class="fade-in flex flex-col gap-3 rounded-xl p-8 border border-primary/10 bg-white shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-default">
+                <span class="material-symbols-outlined text-primary text-4xl">bathtub</span>
+                <div>
+                    <p class="text-slate-500 text-sm font-medium uppercase tracking-wider">Baños</p>
+                    <p class="text-slate-900 text-2xl font-bold">4 Baños</p>
+                </div>
+            </div>
+            <div class="fade-in flex flex-col gap-3 rounded-xl p-8 border border-primary/10 bg-white shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-default">
+                <span class="material-symbols-outlined text-primary text-4xl">landscape</span>
+                <div>
+                    <p class="text-slate-500 text-sm font-medium uppercase tracking-wider">Extensión</p>
+                    <p class="text-slate-900 text-2xl font-bold">70 Hectáreas</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- About section with image -->
+        <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="flex flex-col gap-6 fade-in">
+                <h3 class="text-slate-900 text-3xl font-bold leading-tight">Auténtico estilo rústico mallorquín</h3>
+                <p class="text-slate-600 text-lg leading-relaxed">Finca Son Creixell es una casa antigua del siglo XVII, totalmente renovada para ofrecer el máximo confort sin perder su esencia. Ubicada en un entorno rural privilegiado, los huéspedes pueden disfrutar de la tranquilidad absoluta y del contacto con la naturaleza.</p>
+                <p class="text-slate-600 text-lg leading-relaxed">Relájese en nuestro jardín interior con piscina y césped, o explore la inmensa finca donde podrá ver ovejas y cerdos en su hábitat natural. Un espacio único para desconectar en familia o con amigos.</p>
+                <div class="flex flex-wrap gap-4">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <span class="text-sm font-medium">Cocina Equipada</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <span class="text-sm font-medium">Salón y Comedor</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <span class="text-sm font-medium">Piscina Privada</span>
+                    </div>
+                </div>
+                <a href="galeria.html" class="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all no-underline mt-2">
+                    Ver más detalles <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+            <div class="fade-in rounded-xl overflow-hidden shadow-2xl aspect-[4/3] relative group">
+                <img alt="Jardín mediterráneo con muros de piedra y olivos" class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" src="img/olivos_jardin.jpg"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="bg-primary/5 px-6 py-16 md:px-20 lg:px-40 fade-in">
+    <div class="flex flex-col items-center text-center gap-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900">¿Listo para su escapada a Son Creixell?</h2>
+        <p class="max-w-2xl text-slate-600 text-lg">Reserve su estancia en nuestra finca histórica y viva la experiencia más auténtica de la Mallorca rural.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="reserva.html" class="bg-primary text-white font-bold px-10 py-4 rounded-lg text-lg shadow-lg hover:bg-primary/90 hover:-translate-y-1 transition-all no-underline">Reservar Ahora</a>
+            <a href="galeria.html" class="bg-transparent border-2 border-primary text-primary font-bold px-10 py-4 rounded-lg text-lg hover:bg-primary/10 transition-all no-underline">Ver Galería</a>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="px-6 py-12 md:px-20 lg:px-40 fade-in">
+    <div class="rounded-xl overflow-hidden h-96 w-full relative grayscale contrast-125 border border-primary/20 group cursor-pointer" onclick="window.location.href='ubicacion.html'">
+        <img class="w-full h-full object-cover opacity-50 transition-all duration-500 group-hover:opacity-70 group-hover:scale-105" alt="Mapa estilizado de Sineu, Mallorca" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNhDfuxffejlStH_huYR4hw-B9Du2BOEoINmOED_f6DnGZbSFtBD3e_ZVaZdk1z-tEYoreS-ZQ4yo4z0T69rSa2q8jwLppeFmqF7UsBrnoF6In-JHtHtGONPV2JOY7NtJKKqoWou3lAu6Qc5lLXsWgrO6WKCpJVeHRTP6IM9G0MDilMcyGHnVZrT2E_cTwaYpMpV7EVA19rSjot-7zs6Sj2FWrrxPwhFb6gpWLYAQPLg1jnTdXvFurk9XivBP57nmoK3yOsgcLelI"/>
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="bg-white p-6 rounded-xl shadow-xl border border-primary/10 flex flex-col items-center gap-2 hover:shadow-2xl transition-shadow float-animation">
+                <span class="material-symbols-outlined text-primary text-4xl">location_on</span>
+                <p class="font-bold text-xl">Ubícanos en Sineu</p>
+                <p class="text-sm text-slate-500">El corazón rural de Mallorca</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="px-6 py-10 md:px-20 lg:px-40 bg-slate-900 text-slate-400 border-t border-white/5">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div class="col-span-1 md:col-span-2 flex flex-col gap-4">
+            <div class="flex items-center gap-2 text-white">
+                <span class="material-symbols-outlined text-primary">foundation</span>
+                <span class="text-xl font-bold">Finca Son Creixell</span>
+            </div>
+            <p class="max-w-sm">Una exclusiva posesión del siglo XVII en Sineu, ofreciendo una experiencia rural inigualable en un entorno de 70 hectáreas.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+            <h4 class="text-white font-bold">Contacto</h4>
+            <p>Sineu, Mallorca<br/>Islas Baleares, España</p>
+            <p>+34 606390024</p>
+            <p>fincasoncreixell@gmail.com</p>
+        </div>
+        <div class="flex flex-col gap-4">
+            <h4 class="text-white font-bold">Navegación</h4>
+            <div class="flex flex-col gap-2">
+                <a class="hover:text-primary transition-colors no-underline text-slate-400" href="index.html">Inicio</a>
+                <a class="hover:text-primary transition-colors no-underline text-slate-400" href="galeria.html">Galería</a>
+                <a class="hover:text-primary transition-colors no-underline text-slate-400" href="ubicacion.html">Ubicación</a>
+                <a class="hover:text-primary transition-colors no-underline text-slate-400" href="reserva.html">Reservas</a>
+            </div>
+        </div>
+    </div>
+    <!-- Legal Information Section -->
+    <div class="mt-12 pt-8 border-t border-white/5 text-[10px] leading-relaxed text-slate-500">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+            <div class="space-y-2">
+                <p><strong>Registro autonómico (Illes Balears):</strong> ETV/1387</p>
+                <p><strong>Registro nacional (NRUA):</strong> ESFCTU00000701100048885200000000000000000000</p>
+                <p><strong>Condiciones de uso:</strong> el usuario se compromete a utilizar este sitio y su contenido de forma lícita y sin causar daños.</p>
+            </div>
+            <div class="space-y-2">
+                <p><strong>Propiedad intelectual:</strong> los contenidos (textos, imágenes y marcas) son titularidad del explotador o de terceros autorizados; queda prohibida su reproducción sin autorización.</p>
+                <p><strong>Responsabilidad:</strong> el titular no se responsabiliza del uso indebido del sitio ni de interrupciones del servicio por causas técnicas o de terceros.</p>
+                <p><strong>Legislación aplicable y jurisdicción:</strong> España; para cualquier controversia, las partes se someten a los Juzgados y Tribunales competentes.</p>
+            </div>
+        </div>
+    </div>
+    <div class="mt-8 pt-8 border-t border-white/5 text-sm text-center">© 2025 Finca Son Creixell. Todos los derechos reservados.</div>
+</footer>
+
+</div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

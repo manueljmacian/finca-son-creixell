@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6B8E23", // Olive Green
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Finca Son Creixell - Casa Antigua del Siglo XVII en Sineu</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 py-4 md:px-20 lg:px-40 bg-background-light dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-3xl">foundation</span>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-[-0.015em]">Finca Son Creixell</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Inicio</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Galería</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Ubicación</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Reservas</a>
+</nav>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold transition-transform active:scale-95">
+<span>Reservar Ahora</span>
+</button>
+</div>
+</header>
+<main class="flex flex-col flex-1">
+<section class="p-4 md:px-20 lg:px-40">
+<div class="@container">
+<div class="relative flex min-h-[600px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-6 text-center" data-alt="Traditional stone Mallorcan house with pool and garden" style='background-image: linear-gradient(rgba(34, 22, 16, 0.4) 0%, rgba(34, 22, 16, 0.7) 100%), url("https://lh3.googleusercontent.com/aida/ADBb0ugE9agx8DqYFvbys2m_wN7O-nOHhyWJN7m0dGFx_CoDVNZjncR4inUee_qUWUIjrZ6YxOyS9wp9uliqzoqOgvGhcjC-go7tXg9BRE8HvxRbEZ0hetyRqKo-ardEGJqcqadqlnC7HD6iigjm5ScD2pxw-uGuo8Aw34F0djttp4GQWrplMJJLHQhK0Z4SS1mli2HIX-S5hhH3sy3-_SUlNi-6ECzo4Ou29nKMQXMOfl1X3ivMXW5nkBXXieiVzLOQEA9ScMeERZNLJw");'>
+<div class="max-w-3xl flex flex-col gap-4">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-6xl">Finca Son Creixell: Tradición y Relax</h1>
+<p class="text-white/90 text-lg font-normal md:text-xl">Descubra una joya del siglo XVII totalmente renovada en el corazón de una finca de 70 hectáreas en Sineu.</p>
+<div class="mt-4">
+<button class="flex mx-auto min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-primary text-white text-lg font-bold shadow-lg hover:shadow-primary/20 transition-all">
+<span>Consultar Disponibilidad</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 py-12 md:px-20 lg:px-40">
+<div class="flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<h2 class="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight tracking-tight">Su Refugio Histórico</h2>
+<div class="h-1 w-20 bg-primary rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="flex flex-col gap-3 rounded-xl p-8 border border-primary/10 bg-white dark:bg-slate-800/50 shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-4xl">bed</span>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Alojamiento</p>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">4 Habitaciones</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl p-8 border border-primary/10 bg-white dark:bg-slate-800/50 shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-4xl">bathtub</span>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Baños</p>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">4 Baños</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl p-8 border border-primary/10 bg-white dark:bg-slate-800/50 shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-4xl">landscape</span>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Extensión</p>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">70 Hectáreas</p>
+</div>
+</div>
+</div>
+<div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-6">
+<h3 class="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight">Auténtico estilo rústico mallorquín</h3>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">Finca Son Creixell es una casa antigua del siglo XVII, totalmente renovada para ofrecer el máximo confort sin perder su esencia. Ubicada en un entorno rural privilegiado, los huéspedes pueden disfrutar de la tranquilidad absoluta y del contacto con la naturaleza.</p>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">Relájese en nuestro jardín interior con piscina y césped, o explore la inmensa finca donde podrá ver ovejas y cerdos en su hábitat natural. Un espacio único para desconectar en familia o con amigos.</p>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-sm font-medium">Cocina Equipada</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-sm font-medium">Salón y Comedor</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-sm font-medium">Piscina Privada</span>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-2xl aspect-[4/3] relative">
+<img alt="Jardín mediterráneo con muros de piedra y olivos" class="object-cover w-full h-full" data-alt="Close up of Mallorcan stone architecture and gardens" src="https://lh3.googleusercontent.com/aida/ADBb0uiwOLw_40HOwLXV_obZXglz82zCqqEGKb4fVyTP7yf2elWJM5orb2J3iQeWuE6gqzUSRl_Y-nb1dXoGK6kbRH7qsCAQJu9JCHTlFiO8r4q1n6fubap--bBgXKrjaVLW3LN-rqwYamq81hwzpvSPlVjHbvtMr8jh46mrpLFva6r0-1Ztk_-0SkDAuPVtBEVlwdn2VtrQmTD_XYRp4U85qcSnHbf89Q7fZnlcDHmRHMJroBxlIhS2HzP9vFdaVOr1ecv_53kD6lB-"/>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-primary/5 dark:bg-primary/10 px-6 py-16 md:px-20 lg:px-40">
+<div class="flex flex-col items-center text-center gap-8">
+<h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100">¿Listo para su escapada a Son Creixell?</h2>
+<p class="max-w-2xl text-slate-600 dark:text-slate-400 text-lg">Reserve su estancia en nuestra finca histórica y viva la experiencia más auténtica de la Mallorca rural.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-primary text-white font-bold px-10 py-4 rounded-lg text-lg shadow-lg hover:bg-primary/90 transition-all">Reservar Ahora</button>
+<button class="bg-transparent border-2 border-primary text-primary font-bold px-10 py-4 rounded-lg text-lg hover:bg-primary/10 transition-all">Ver Galería</button>
+</div>
+</div>
+</section>
+<section class="px-6 py-12 md:px-20 lg:px-40">
+<div class="rounded-xl overflow-hidden h-96 w-full relative grayscale contrast-125 border border-primary/20">
+<img class="w-full h-full object-cover opacity-50" data-alt="Stylized map of Sineu Mallorca region" data-location="Sineu, Mallorca" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNhDfuxffejlStH_huYR4hw-B9Du2BOEoINmOED_f6DnGZbSFtBD3e_ZVaZdk1z-tEYoreS-ZQ4yo4z0T69rSa2q8jwLppeFmqF7UsBrnoF6In-JHtHtGONPV2JOY7NtJKKqoWou3lAu6Qc5lLXsWgrO6WKCpJVeHRTP6IM9G0MDilMcyGHnVZrT2E_cTwaYpMpV7EVA19rSjot-7zs6Sj2FWrrxPwhFb6gpWLYAQPLg1jnTdXvFurk9XivBP57nmoK3yOsgcLelI"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-xl border border-primary/10 flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-primary text-4xl">location_on</span>
+<p class="font-bold text-xl">Ubícanos en Sineu</p>
+<p class="text-sm text-slate-500">El corazón rural de Mallorca</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="px-6 py-10 md:px-20 lg:px-40 bg-slate-900 text-slate-400 border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2 flex flex-col gap-4">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-primary">foundation</span>
+<span class="text-xl font-bold">Finca Son Creixell</span>
+</div>
+<p class="max-w-sm">Una exclusiva posesión del siglo XVII en Sineu, ofreciendo una experiencia rural inigualable en un entorno de 70 hectáreas.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold">Contacto</h4>
+<p>Sineu, Mallorca<br/>Islas Baleares, España</p>
+<p>+34 971 000 000</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold">Siguenos</h4>
+<div class="flex gap-4">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">Facebook</a>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-white/5 text-sm text-center">© 2024 Finca Son Creixell. Todos los derechos reservados.</div>
+</footer>
+</div>
+</div>
+</body></html>

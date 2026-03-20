@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Reserva tu Estancia | Finca Son Creixell - Sineu, Mallorca</title>
+    <meta name="description" content="Reserva tu estancia en Finca Son Creixell, Sineu, Mallorca. Capacidad para 8 personas, 4 dormitorios, 4 baños, piscina privada en 70 hectáreas de naturaleza."/>
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="Reservas - Finca Son Creixell">
+    <meta property="og:description" content="Joya rústica del siglo XVII en una finca de 70 hectáreas. 4 habitaciones, piscina privada y privacidad absoluta.">
+    <meta property="og:image" content="https://fincasoncreixell.com/img/fachada_dia.jpg">
+    <meta property="og:url" content="https://fincasoncreixell.com/reserva.html">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://npmcdn.com/flatpickr/dist/themes/airbnb.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/es.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body class="bg-background-light font-sans text-slate-900 leading-relaxed overflow-hidden min-h-screen">
+<!-- Preloader -->
+<div id="preloader">
+    <div class="preloader-brand">SON CREIXELL</div>
+</div>
+<div class="layout-container flex h-full grow flex-col">
+
+<!-- Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-white/90 backdrop-blur-md px-6 md:px-20 py-4 sticky top-0 z-50">
+    <a href="index.html" class="flex items-center gap-4 text-primary no-underline">
+        <div class="size-8 flex items-center justify-center bg-primary text-white rounded-lg">
+            <span class="material-symbols-outlined">holiday_village</span>
+        </div>
+        <h2 class="text-slate-900 text-xl font-bold leading-tight tracking-tight">Finca Son Creixell</h2>
+    </a>
+    <div class="flex flex-1 justify-end gap-8 items-center">
+        <nav class="hidden md:flex items-center gap-9">
+            <a class="nav-link text-slate-700 text-sm font-medium hover:text-primary transition-colors no-underline" href="index.html">Inicio</a>
+            <a class="nav-link text-slate-700 text-sm font-medium hover:text-primary transition-colors no-underline" href="galeria.html">Galería</a>
+            <a class="nav-link text-slate-700 text-sm font-medium hover:text-primary transition-colors no-underline" href="ubicacion.html">Ubicación</a>
+            <a class="nav-link active text-primary text-sm font-bold no-underline" href="reserva.html">Reservas</a>
+        </nav>
+        <button id="mobile-toggle" class="md:hidden flex items-center justify-center size-10 rounded-lg hover:bg-primary/10 transition-colors">
+            <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+    </div>
+</header>
+
+<!-- Mobile menu -->
+<div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/50 z-[60]"></div>
+<div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-white shadow-2xl z-[70] p-8 flex flex-col gap-6">
+    <div class="flex justify-between items-center mb-4">
+        <span class="text-lg font-bold text-primary">Menú</span>
+        <button id="mobile-close" class="size-10 flex items-center justify-center rounded-lg hover:bg-primary/10"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <a href="index.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-slate-700 font-medium no-underline"><span class="material-symbols-outlined">home</span> Inicio</a>
+    <a href="galeria.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-slate-700 font-medium no-underline"><span class="material-symbols-outlined">photo_library</span> Galería</a>
+    <a href="ubicacion.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-slate-700 font-medium no-underline"><span class="material-symbols-outlined">location_on</span> Ubicación</a>
+    <a href="reserva.html" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/10 text-primary font-bold no-underline"><span class="material-symbols-outlined">calendar_today</span> Reservas</a>
+</div>
+
+<main class="flex-1 max-w-7xl mx-auto w-full px-6 md:px-20 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <!-- Left Column: Form -->
+        <div class="lg:col-span-7 fade-in">
+            <div class="mb-10">
+                <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">Reserva en Son Creixell</h1>
+                <p class="text-slate-600 text-lg mb-4">Disfruta de la tranquilidad de nuestra exclusiva finca con capacidad para 8 personas en sus <strong>4 amplios dormitorios y 4 baños completos</strong>.</p>
+                <p class="text-slate-500">Solicita tu estancia y nos pondremos en contacto contigo para confirmar la disponibilidad.</p>
+            </div>
+
+            <!-- Booking Form -->
+            <form id="booking-form" class="space-y-6" onsubmit="return handleSubmit(event)">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-semibold text-slate-700" for="nombre">Nombre Completo *</label>
+                        <div class="relative">
+                            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">person</span>
+                            <input id="nombre" name="nombre" required class="w-full pl-12 pr-4 py-4 rounded-xl border border-primary/10 bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="Juan Pérez" type="text"/>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-semibold text-slate-700" for="email">Correo Electrónico *</label>
+                        <div class="relative">
+                            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">mail</span>
+                            <input id="email" name="email" required class="w-full pl-12 pr-4 py-4 rounded-xl border border-primary/10 bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="juan@ejemplo.com" type="email"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-semibold text-slate-700" for="fecha-entrada">Fecha de Entrada *</label>
+                        <div class="relative">
+                            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">calendar_today</span>
+                            <input id="fecha-entrada" name="fecha-entrada" required class="w-full pl-12 pr-4 py-4 rounded-xl border border-primary/10 bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" type="date"/>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-semibold text-slate-700" for="fecha-salida">Fecha de Salida *</label>
+                        <div class="relative">
+                            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">event_available</span>
+                            <input id="fecha-salida" name="fecha-salida" required class="w-full pl-12 pr-4 py-4 rounded-xl border border-primary/10 bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" type="date"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-semibold text-slate-700" for="huespedes">Número de Huéspedes</label>
+                        <div class="relative">
+                            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">group</span>
+                            <select id="huespedes" name="huespedes" class="w-full pl-12 pr-4 py-4 rounded-xl border border-primary/10 bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none appearance-none">
+                                <option value="1">1 persona</option>
+                                <option value="2">2 personas</option>
+                                <option value="3">3 personas</option>
+                                <option value="4">4 personas</option>
+                                <option value="5">5 personas</option>
+                                <option value="6">6 personas</option>
+                                <option value="7">7 personas</option>
+                                <option value="8" selected>8 personas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-semibold text-slate-700" for="telefono">Teléfono</label>
+                        <div class="relative">
+                            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">call</span>
+                            <input id="telefono" name="telefono" class="w-full pl-12 pr-4 py-4 rounded-xl border border-primary/10 bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="+34 606390024" type="tel"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="text-sm font-semibold text-slate-700" for="mensaje">Tu mensaje o peticiones especiales</label>
+                    <textarea id="mensaje" name="mensaje" class="w-full p-4 rounded-xl border border-primary/10 bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none resize-none" placeholder="Cuéntanos sobre tu estancia o haznos cualquier pregunta sobre la finca..." rows="5"></textarea>
+                </div>
+                <button id="submit-btn" class="w-full py-4 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:bg-primary/90 transform hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 active:scale-95" type="submit">
+                    <span class="material-symbols-outlined">send</span>
+                    Enviar Solicitud de Reserva
+                </button>
+            </form>
+
+            <!-- Success Message -->
+            <div id="form-success" class="form-success flex-col">
+                <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl h-[500px] flex items-center justify-center border border-primary/20">
+                    <img src="img/piscina_atardecer.jpg" alt="Piscina Finca Son Creixell" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+                    <div class="relative z-10 bg-white/30 backdrop-blur-xl border border-white/50 p-10 rounded-2xl text-center max-w-sm mx-4 shadow-2xl float-animation">
+                        <div class="size-16 rounded-full bg-white/40 text-slate-900 flex items-center justify-center mx-auto mb-6 backdrop-blur-sm shadow-lg">
+                            <span class="material-symbols-outlined text-4xl">task_alt</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-slate-900 mb-4 drop-shadow-sm font-serif">¡Solicitud Enviada!</h3>
+                        <p class="text-slate-800 text-lg mb-8 font-sans font-medium">
+                            Hemos recibido su petición. Le contactaremos en breve para confirmar disponibilidad en la finca.
+                        </p>
+                        <a href="index.html" class="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800 transition-colors shadow-xl no-underline font-sans">
+                            <span class="material-symbols-outlined mr-2">arrow_back</span> Volver a Inicio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Contact Info -->
+        <div class="lg:col-span-5 space-y-10 fade-in">
+            <div class="bg-white/60 backdrop-blur-2xl rounded-3xl p-8 border border-white shadow-xl shadow-primary/5">
+                <h3 class="text-2xl font-bold mb-6 text-slate-900 font-serif">Información de Contacto</h3>
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="size-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined">call</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-500">Atención al Cliente</p>
+                            <a href="tel:+34606390024" class="text-lg font-bold text-slate-900 no-underline hover:text-primary transition-colors">+34 606390024</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="size-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-500">Correo Electrónico</p>
+                            <a href="mailto:fincasoncreixell@gmail.com" class="text-lg font-bold text-slate-900 no-underline hover:text-primary transition-colors">fincasoncreixell@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="size-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-500">Ubicación</p>
+                            <p class="text-lg font-bold text-slate-900">Son Creixell, Mallorca, Islas Baleares</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">DESCUBRE NUESTRO ENTORNO</h4>
+                    <div class="flex gap-4">
+                        <a class="size-10 rounded-full bg-white shadow-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">public</span></a>
+                        <a class="size-10 rounded-full bg-white shadow-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">share</span></a>
+                        <a class="size-10 rounded-full bg-white shadow-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map/Location Card -->
+            <div class="relative overflow-hidden rounded-3xl h-64 border border-primary/10 shadow-xl group">
+                <img alt="Vista de la piscina de Finca Son Creixell" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="img/piscina_dia.jpg"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent flex items-end p-6">
+                    <a href="ubicacion.html" class="flex items-center gap-2 text-white no-underline hover:text-primary-light transition-colors">
+                        <span class="material-symbols-outlined text-primary-light">pin_drop</span>
+                        <span class="font-bold">Ver ubicación en Mallorca</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Help -->
+            <div class="p-6 rounded-3xl bg-white/40 backdrop-blur-xl border border-dashed border-primary/30 flex flex-col items-center text-center gap-4 shadow-sm">
+                <div class="size-14 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-3xl">chat_bubble</span>
+                </div>
+                <div>
+                    <h4 class="font-bold">¿Tienes dudas sobre la finca?</h4>
+                    <p class="text-slate-500 text-sm">Estamos disponibles para resolver cualquier duda sobre los 4 dormitorios o las instalaciones.</p>
+                </div>
+                <a href="mailto:fincasoncreixell@gmail.com" class="text-primary font-bold hover:underline no-underline">Escríbenos un email</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-white border-t border-primary/10 py-12 px-6 md:px-20">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        <a href="index.html" class="flex items-center gap-3 no-underline">
+            <div class="size-6 bg-primary text-white rounded flex items-center justify-center">
+                <span class="material-symbols-outlined text-xs">holiday_village</span>
+            </div>
+            <span class="font-bold tracking-tight text-slate-900">Finca Son Creixell</span>
+        </a>
+        <div class="flex gap-8 text-sm font-medium text-slate-500">
+            <a class="hover:text-primary transition-colors no-underline text-slate-500" href="index.html">Inicio</a>
+            <a class="hover:text-primary transition-colors no-underline text-slate-500" href="galeria.html">Galería</a>
+            <a class="hover:text-primary transition-colors no-underline text-slate-500" href="ubicacion.html">Ubicación</a>
+        </div>
+        <p class="text-sm text-slate-400">© 2025 Finca Son Creixell. Todos los derechos reservados.</p>
+    </div>
+    <!-- Legal Information Section -->
+    <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-slate-100 text-[10px] leading-relaxed text-slate-400">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+            <div class="space-y-2">
+                <p><strong>Registro autonómico (Illes Balears):</strong> ETV/1387</p>
+                <p><strong>Registro nacional (NRUA):</strong> ESFCTU00000701100048885200000000000000000000</p>
+                <p><strong>Condiciones de uso:</strong> el usuario se compromete a utilizar este sitio y su contenido de forma lícita y sin causar daños.</p>
+            </div>
+            <div class="space-y-2">
+                <p><strong>Propiedad intelectual:</strong> los contenidos (textos, imágenes y marcas) son titularidad del explotador o de terceros autorizados; queda prohibida su reproducción sin autorización.</p>
+                <p><strong>Responsabilidad:</strong> el titular no se responsabiliza del uso indebido del sitio ni de interrupciones del servicio por causas técnicas o de terceros.</p>
+                <p><strong>Legislación aplicable y jurisdicción:</strong> España; para cualquier controversia, las partes se someten a los Juzgados y Tribunales competentes.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Legal Information Section -->
+    <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-slate-100 text-[10px] leading-relaxed text-slate-400">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+            <div class="space-y-2">
+                <p><strong>Registro autonómico (Illes Balears):</strong> ETV/1387</p>
+                <p><strong>Registro nacional (NRUA):</strong> ESFCTU00000701100048885200000000000000000000</p>
+                <p><strong>Condiciones de uso:</strong> el usuario se compromete a utilizar este sitio y su contenido de forma lícita y sin causar daños.</p>
+            </div>
+            <div class="space-y-2">
+                <p><strong>Propiedad intelectual:</strong> los contenidos (textos, imágenes y marcas) son titularidad del explotador o de terceros autorizados; queda prohibida su reproducción sin autorización.</p>
+                <p><strong>Responsabilidad:</strong> el titular no se responsabiliza del uso indebido del sitio ni de interrupciones del servicio por causas técnicas o de terceros.</p>
+                <p><strong>Legislación aplicable y jurisdicción:</strong> España; para cualquier controversia, las partes se someten a los Juzgados y Tribunales competentes.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+<script src="js/main.js"></script>
+<script>
+function handleSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('booking-form');
+    const requiredInputs = form.querySelectorAll('input[required]');
+    let isValid = true;
+    
+    // Real-time visual validation
+    requiredInputs.forEach(input => {
+        if (!input.value.trim()) {
+            input.classList.add('error', 'shake');
+            setTimeout(() => input.classList.remove('shake'), 400);
+            isValid = false;
+        } else {
+            input.classList.remove('error');
+        }
+    });
+
+    if (!isValid) return false;
+
+    // Remove errors on typing
+    requiredInputs.forEach(input => {
+        input.addEventListener('input', () => {
+            if (input.value.trim()) input.classList.remove('error');
+        });
+        input.addEventListener('change', () => {
+            if (input.value.trim()) input.classList.remove('error');
+        });
+    });
+
+    const btn = document.getElementById('submit-btn');
+    btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> Procesando...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+        form.style.display = 'none';
+        form.previousElementSibling.style.display = 'none'; 
+        document.getElementById('form-success').classList.add('active');
+    }, 1500);
+
+    return false;
+}
+
+// Attach listeners for real-time removal of error states before submit
+document.addEventListener('DOMContentLoaded', () => {
+    const inputs = document.querySelectorAll('input[required]');
+    inputs.forEach(input => {
+        input.addEventListener('input', () => input.classList.remove('error'));
+        input.addEventListener('change', () => input.classList.remove('error'));
+    });
+});
+</script>
+</body>
+</html>

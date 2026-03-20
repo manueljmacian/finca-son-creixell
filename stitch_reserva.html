@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reserva tu Estancia | Finca Son Creixell</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#93d411",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Work Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary text-white rounded-lg">
+<span class="material-symbols-outlined">holiday_village</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Finca Son Creixell</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Inicio</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">La Finca</a>
+<a class="text-primary text-sm font-bold border-b-2 border-primary" href="#">Reservas</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-full size-10 bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<div class="size-10 rounded-full border-2 border-primary/20 p-0.5">
+<img alt="Perfil de usuario" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTT_ioB52OEctcSEk1XmjJPxrT4-72dhFHoFasESQTBq7C7qt1pPYZYZiCvwTyxydp78ovfv2v-CxBOaix2CD4VAMbvOoGiy5km4hL8-BA9B9HGy2hiIJ3kaRj4FpQqdhch65stQFWkDAxSsdFOrC6ZVGCjiYrLq6cc16WlEb5JjzJdVACVburacVm1-6EGgVmzczdYxWWzZ0puJj87_ZLFMvwPk8vRZGCXoX6-0OXlebb1lfx5nfx-Dgvc0LQ6_u09L79gFrHdL0"/>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full px-6 md:px-20 py-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left Column: Form -->
+<div class="lg:col-span-7">
+<div class="mb-10">
+<h1 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-slate-100 mb-4 tracking-tight">Reserva en Son Creixell</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg mb-4">Disfruta de la tranquilidad de nuestra exclusiva finca con capacidad para 8 personas en sus <strong>4 amplios dormitorios y 4 baños completos</strong>.</p>
+<p class="text-slate-500 dark:text-slate-400">Solicita tu estancia y nos pondremos en contacto contigo para confirmar la disponibilidad.</p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Nombre Completo</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">person</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-xl border border-primary/10 bg-white dark:bg-background-dark/50 focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="Juan Pérez" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Correo Electrónico</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">mail</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-xl border border-primary/10 bg-white dark:bg-background-dark/50 focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="juan@ejemplo.com" type="email"/>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Fecha de Entrada</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">calendar_today</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-xl border border-primary/10 bg-white dark:bg-background-dark/50 focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" type="date"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Fecha de Salida</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">event_available</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-xl border border-primary/10 bg-white dark:bg-background-dark/50 focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" type="date"/>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Tu mensaje o peticiones especiales</label>
+<textarea class="w-full p-4 rounded-xl border border-primary/10 bg-white dark:bg-background-dark/50 focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none resize-none" placeholder="Cuéntanos sobre tu estancia o haznos cualquier pregunta sobre la finca..." rows="5"></textarea>
+</div>
+<button class="w-full py-4 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:bg-primary/90 transform hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined">send</span>
+                            Enviar Solicitud de Reserva
+                        </button>
+</form>
+</div>
+<!-- Right Column: Contact Info -->
+<div class="lg:col-span-5 space-y-10">
+<div class="bg-primary/5 dark:bg-white/5 rounded-3xl p-8 border border-primary/10">
+<h3 class="text-2xl font-bold mb-6 text-slate-900 dark:text-slate-100">Información de Contacto</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="size-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-500">Atención al Cliente</p>
+<p class="text-lg font-bold text-slate-900 dark:text-slate-100">+34 600 000 000</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="size-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-500">Correo Electrónico</p>
+<p class="text-lg font-bold text-slate-900 dark:text-slate-100">info@fincasoncreixell.com</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="size-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-500">Ubicación</p>
+<p class="text-lg font-bold text-slate-900 dark:text-slate-100">Son Creixell, Mallorca, Islas Baleares</p>
+</div>
+</div>
+</div>
+<div class="mt-10">
+<h4 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">DESCUBRE NUESTRO ENTORNO</h4>
+<div class="flex gap-4">
+<a class="size-10 rounded-full bg-white dark:bg-background-dark shadow-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="size-10 rounded-full bg-white dark:bg-background-dark shadow-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="size-10 rounded-full bg-white dark:bg-background-dark shadow-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Map/Location Card -->
+<div class="relative overflow-hidden rounded-3xl h-64 border border-primary/10 shadow-xl group">
+<img alt="Mapa estilizado de la ubicación de Finca Son Creixell en Mallorca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF9Z6F-mk0gGVJbAPbeXmLHYwtZj1LbhLxsOIawG6LPUNnfZbIJ5BsQ7Nkh7wQoqnSV3sJ9bB7azxHmD7gR-eqGEK1wlPV5ks_fr6M8Vvei_2W6TdpIVa72dtNJRSeLoTM4bEhlP47wphzvw56mQjLkYWbZ6w3u9iG0PNqE49CgQC_SNLlThUkDKlIpBlmbAdx-KU4Pl3XxLSY11HBtis9TRwf8-cSvUKw78QRIHhaGoteanWUQ95td80pJjI2WqduXrT6c5QmYOc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent flex items-end p-6">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-primary">pin_drop</span>
+<span class="font-bold">Ver ubicación en Mallorca</span>
+</div>
+</div>
+</div>
+<!-- Quick Help -->
+<div class="p-6 rounded-3xl border border-dashed border-primary/30 flex flex-col items-center text-center gap-4">
+<div class="size-14 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">chat_bubble</span>
+</div>
+<div>
+<h4 class="font-bold">¿Tienes dudas sobre la finca?</h4>
+<p class="text-slate-500 text-sm">Estamos disponibles para resolver cualquier duda sobre los 4 dormitorios o las instalaciones.</p>
+</div>
+<button class="text-primary font-bold hover:underline">Chat de Ayuda</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-primary/10 py-12 px-6 md:px-20">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-6 bg-primary text-white rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">holiday_village</span>
+</div>
+<span class="font-bold tracking-tight">Finca Son Creixell</span>
+</div>
+<div class="flex gap-8 text-sm font-medium text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Aviso Legal</a>
+<a class="hover:text-primary transition-colors" href="#">Política de Privacidad</a>
+<a class="hover:text-primary transition-colors" href="#">Preguntas Frecuentes</a>
+</div>
+<p class="text-sm text-slate-400">© 2024 Finca Son Creixell. Todos los derechos reservados.</p>
+</div>
+</footer>
+</div>
+</body></html>

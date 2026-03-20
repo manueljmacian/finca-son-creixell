@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6B705C",
+                        "primary-accent": "#93d411",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Finca Son Creixell - Galería y Detalles</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative flex min-h-screen flex-col">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">foundation</span>
+<h1 class="text-xl font-black tracking-tight text-slate-900 dark:text-slate-100 uppercase">Finca Son Creixell</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-full p-2 text-slate-600 hover:bg-primary/10 hover:text-primary dark:text-slate-400">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="flex items-center justify-center rounded-full p-2 text-slate-600 hover:bg-primary/10 hover:text-primary dark:text-slate-400">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="hidden sm:block rounded-lg bg-primary px-6 py-2 text-sm font-bold text-white transition-opacity hover:opacity-90">Reservar ahora</button>
+</div>
+</div>
+</header>
+<main class="mx-auto w-full max-w-7xl flex-grow px-4 py-8 sm:px-6 lg:px-8">
+<!-- Hero Title -->
+<div class="mb-8">
+<h2 class="text-3xl font-black tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl lg:text-5xl">Finca Son Creixell</h2>
+<div class="mt-2 flex items-center gap-2 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+<span class="text-base">Mallorca, Islas Baleares, España</span>
+</div>
+</div>
+<!-- Image Grid Layout -->
+<div class="grid grid-cols-1 gap-4 md:grid-cols-4 md:grid-rows-2 h-[400px] md:h-[600px] mb-12">
+<div class="md:col-span-2 md:row-span-2 overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Finca Son Creixell exterior de piedra mallorquina" style="background-image: url('https://lh3.googleusercontent.com/aida/ADBb0ugE9agx8DqYFvbys2m_wN7O-nOHhyWJN7m0dGFx_CoDVNZjncR4inUee_qUWUIjrZ6YxOyS9wp9uliqzoqOgvGhcjC-go7tXg9BRE8HvxRbEZ0hetyRqKo-ardEGJqcqadqlnC7HD6iigjm5ScD2pxw-uGuo8Aw34F0djttp4GQWrplMJJLHQhK0Z4SS1mli2HIX-S5hhH3sy3-_SUlNi-6ECzo4Ou29nKMQXMOfl1X3ivMXW5nkBXXieiVzLOQEA9ScMeERZNLJw')">
+</div>
+</div>
+<div class="hidden md:block overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Piscina de la finca al atardecer" style="background-image: url('https://lh3.googleusercontent.com/aida/ADBb0uhwgIra-jBvILVgUbaDk27OOyv1HJT_Pgf_QYA8GcZDG0628z_6tsmICOW9WjFE8iGgpZujQQzC0s30zPK54KIZIbncnsyeCovuRckUq6liJ7puOCgfrlCHWw-rQJbiMlQfCMIqAI0Lw6Ko3iM-iAZFDjvwlzELPG2oEds3Eyvrm5KjT8l2BGfDkp9hq6n6zSsTznpVZGojg5YXdWQlNImKn4LrBo81EU_ef30KMacLdo0DEJ66LYGVz4MahdUKpOP9Mwopplmhuw')">
+</div>
+</div>
+<div class="hidden md:block overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Jardines mediterráneos con olivos centenarios" style="background-image: url('https://lh3.googleusercontent.com/aida/ADBb0uiwOLw_40HOwLXV_obZXglz82zCqqEGKb4fVyTP7yf2elWJM5orb2J3iQeWuE6gqzUSRl_Y-nb1dXoGK6kbRH7qsCAQJu9JCHTlFiO8r4q1n6fubap--bBgXKrjaVLW3LN-rqwYamq81hwzpvSPlVjHbvtMr8jh46mrpLFva6r0-1Ztk_-0SkDAuPVtBEVlwdn2VtrQmTD_XYRp4U85qcSnHbf89Q7fZnlcDHmRHMJroBxlIhS2HzP9vFdaVOr1ecv_53kD6lB-')">
+</div>
+</div>
+<div class="hidden md:block overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Detalle rústico de horno tradicional" style="background-image: url('https://lh3.googleusercontent.com/aida/ADBb0uivp1gNTbmGvmfu4L1CAJf3azS45c0K-lu7BKiB8LieCt8ZP-NMLiecMmFV-U-a2Cgl_-OQ5Lo-QAIiVbK7pzpenoG7pFA7rxrcQ9YDUqj5bS5CMwpoLQFklDBMejoHagsbkdqOsxFoPI8XY4kuc_MNzgZVrRCoPjVPMr-rhWBnok4sWIPHOyj4MmUvNnhU0A9-KGHoJFjFlLlnh9k_heZJZ_SgjNREarLLVnl83pFgB3oEXfDvGoa9YAQKRNrvV-S_hJirS924Fg')">
+</div>
+</div>
+<div class="hidden md:block overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 relative">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Fachada histórica reformada" style="background-image: url('https://lh3.googleusercontent.com/aida/ADBb0uhH5KEuVLwfunFnyQi5u0pi00fOccoRdNFv8T6Uy31AN3FDOHng9OCDBL2u-r_xIn26ndBQtfgzMTi-b0_t5bUAHbl-He8IRBiAPF73JOkXYhZQNIwIh2BW6YAmALVZeE1H-abBjZZGpM3x-mdV_nMwbaFiOKrpHZEfbNKvkacc-vWG-9khBsGp-gCdNMnQCYs-n_IMjLYbeRKKQfGlz5DHXwWRP42jcK6_3B9KKli9B7VP6UFKZpjU2LCO_2oY_0bmAgeZvq8bPA')">
+</div>
+<button class="absolute bottom-4 right-4 flex items-center gap-2 rounded-lg bg-white/90 px-4 py-2 text-sm font-bold text-slate-900 shadow-sm backdrop-blur hover:bg-white">
+<span class="material-symbols-outlined text-base">grid_view</span> Mostrar todas las fotos
+                </button>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+<!-- Content Section -->
+<div class="lg:col-span-2">
+<section class="mb-12">
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Sobre este retiro histórico</h3>
+<p class="mt-4 text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+                        Descubra la auténtica esencia de Mallorca en Son Creixell, una majestuosa propiedad con orígenes en el siglo XVII. Esta finca ha sido meticulosamente renovada para ofrecer el máximo confort contemporáneo sin perder su alma rústica tradicional. 
+                    </p>
+<p class="mt-4 text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+                        Ubicada en una extensa finca de 70 hectáreas, los huéspedes pueden disfrutar de la serenidad del campo mallorquín y conocer a los habitantes locales de la propiedad: nuestras ovejas y cerdos que pastan libremente por el terreno.
+                    </p>
+</section>
+<hr class="mb-12 border-primary/10"/>
+<!-- Amenities Section -->
+<section>
+<h3 class="mb-6 text-2xl font-bold text-slate-900 dark:text-slate-100">Lo que ofrece este lugar</h3>
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+<div class="flex items-center gap-4 rounded-lg border border-primary/10 bg-white/50 p-4 dark:bg-slate-800/50">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">bed</span>
+</div>
+<div>
+<p class="font-bold">4 Dormitorios</p>
+<p class="text-sm text-slate-500">Espacios amplios y rústicos</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg border border-primary/10 bg-white/50 p-4 dark:bg-slate-800/50">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">bathroom</span>
+</div>
+<div>
+<p class="font-bold">4 Baños</p>
+<p class="text-sm text-slate-500">Completamente equipados</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg border border-primary/10 bg-white/50 p-4 dark:bg-slate-800/50">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">countertops</span>
+</div>
+<div>
+<p class="font-bold">Cocina completa</p>
+<p class="text-sm text-slate-500">Totalmente equipada</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg border border-primary/10 bg-white/50 p-4 dark:bg-slate-800/50">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">pool</span>
+</div>
+<div>
+<p class="font-bold">Piscina privada</p>
+<p class="text-sm text-slate-500">Con vistas panorámicas</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg border border-primary/10 bg-white/50 p-4 dark:bg-slate-800/50">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">landscape</span>
+</div>
+<div>
+<p class="font-bold">Finca de 70 Hectáreas</p>
+<p class="text-sm text-slate-500">Naturaleza pura y privacidad</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg border border-primary/10 bg-white/50 p-4 dark:bg-slate-800/50">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">pets</span>
+</div>
+<div>
+<p class="font-bold">Animales locales</p>
+<p class="text-sm text-slate-500">Ovejas y cerdos de la finca</p>
+</div>
+</div>
+</div>
+<button class="mt-8 rounded-lg border-2 border-slate-900 px-6 py-3 text-sm font-bold transition-colors hover:bg-slate-900 hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-slate-900">Ver todos los servicios</button>
+</section>
+</div>
+<!-- Sidebar / Booking Card -->
+<div class="lg:sticky lg:top-28 h-fit">
+<div class="rounded-xl border border-primary/10 bg-white p-6 shadow-xl dark:bg-slate-900">
+<div class="flex items-end justify-between mb-6">
+<div>
+<span class="text-2xl font-black text-slate-900 dark:text-slate-100">€450</span>
+<span class="text-slate-500"> / noche</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-sm">star</span>
+<span class="font-bold">4.98</span>
+<span class="text-slate-500">(124 reseñas)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 overflow-hidden rounded-lg border border-slate-200 dark:border-slate-700">
+<div class="border-b border-r border-slate-200 p-3 dark:border-slate-700">
+<label class="text-[10px] font-bold uppercase text-slate-500">Llegada</label>
+<p class="text-sm">12/05/2024</p>
+</div>
+<div class="border-b border-slate-200 p-3 dark:border-slate-700">
+<label class="text-[10px] font-bold uppercase text-slate-500">Salida</label>
+<p class="text-sm">19/05/2024</p>
+</div>
+<div class="col-span-2 p-3">
+<label class="text-[10px] font-bold uppercase text-slate-500">Huéspedes</label>
+<p class="text-sm">Hasta 8 personas</p>
+</div>
+</div>
+<button class="mt-6 w-full rounded-lg bg-primary py-4 text-center font-bold text-white shadow-lg transition-transform hover:scale-[1.02] active:scale-95">Consultar disponibilidad</button>
+<p class="mt-4 text-center text-xs text-slate-500">Aún no se te cobrará nada</p>
+<div class="mt-6 space-y-3">
+<div class="flex justify-between text-sm">
+<span class="underline text-slate-600 dark:text-slate-400">450 € x 7 noches</span>
+<span>€3,150</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="underline text-slate-600 dark:text-slate-400">Gastos de limpieza</span>
+<span>€120</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="underline text-slate-600 dark:text-slate-400">Comisión de servicio</span>
+<span>€85</span>
+</div>
+<hr class="border-slate-200 dark:border-slate-700"/>
+<div class="flex justify-between font-bold">
+<span>Total</span>
+<span>€3,355</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-center gap-2 text-sm text-slate-500">
+<span class="material-symbols-outlined text-sm">flag</span>
+<span class="underline cursor-pointer">Informar sobre este anuncio</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Location Preview Section -->
+<section class="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 border-t border-primary/10">
+<h3 class="mb-6 text-2xl font-bold text-slate-900 dark:text-slate-100">Dónde estarás</h3>
+<div class="relative h-[400px] w-full overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Mapa de la zona de Llubí y alrededores en Mallorca" data-location="Son Creixell, Mallorca" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYk9HO481-Ah5oyl5BHlY88kzs50z4Tfj8faY5dQ00U2OijiDnqzWeqRP_zxCJTEd8Gm_mNffuYVWbYhMyiFo2uXqZTF8YuWKjDiDoK_ZLcuD2l4FlC-uh6rEnZXNaKn-Cm_iSBdo4WGgX8cu8qde_i9SpjoKKOnhtyEYincgWuSEQoW2fwnECLA5mpwf6G02g1jqtGKK7FK6hNItofc0opGTo27tJJAkvLLcOZwcfHzSOKnKZNE5qYCIaPcWYrefTSn1AJNOVq5s')">
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white shadow-2xl ring-8 ring-primary/20">
+<span class="material-symbols-outlined">home</span>
+</div>
+</div>
+</div>
+<p class="mt-4 text-slate-600 dark:text-slate-400 font-medium">Cerca de Llubí, Mallorca, España</p>
+</section>
+<!-- Footer -->
+<footer class="mt-12 border-t border-primary/10 bg-white py-12 dark:bg-slate-900">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+<p class="text-sm text-slate-500">© 2024 Finca Son Creixell. Todos los derechos reservados.</p>
+<div class="flex gap-6 text-sm font-medium text-slate-600 dark:text-slate-400">
+<a class="hover:text-primary underline decoration-primary/20" href="#">Privacidad</a>
+<a class="hover:text-primary underline decoration-primary/20" href="#">Condiciones</a>
+<a class="hover:text-primary underline decoration-primary/20" href="#">Mapa del sitio</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

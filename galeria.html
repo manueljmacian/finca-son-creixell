@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Galería y Detalles - Finca Son Creixell</title>
+    <meta name="description" content="Explore la galería de imágenes y detalles de Finca Son Creixell. 4 dormitorios, 4 baños, piscina privada, cocina completa en 70 hectáreas de naturaleza en Sineu, Mallorca."/>
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="Galería - Finca Son Creixell">
+    <meta property="og:description" content="Joya rústica del siglo XVII en una finca de 70 hectáreas. 4 habitaciones, piscina privada y privacidad absoluta.">
+    <meta property="og:image" content="https://fincasoncreixell.com/img/fachada_dia.jpg">
+    <meta property="og:url" content="https://fincasoncreixell.com/galeria.html">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://npmcdn.com/flatpickr/dist/themes/airbnb.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/es.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body class="bg-background-light font-sans text-slate-900 leading-relaxed overflow-hidden">
+<!-- Preloader -->
+<div id="preloader">
+    <div class="preloader-brand">SON CREIXELL</div>
+</div>
+<div class="relative flex min-h-screen flex-col">
+
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-white/90 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <a href="index.html" class="flex items-center gap-2 no-underline">
+            <span class="material-symbols-outlined text-primary text-3xl">foundation</span>
+            <h1 class="text-xl font-black tracking-tight text-slate-900 uppercase">Finca Son Creixell</h1>
+        </a>
+        <div class="flex items-center gap-4">
+            <nav class="hidden md:flex items-center gap-8 mr-4">
+                <a class="nav-link text-slate-700 text-sm font-medium hover:text-primary transition-colors no-underline" href="index.html">Inicio</a>
+                <a class="nav-link active text-slate-700 text-sm font-medium hover:text-primary transition-colors no-underline" href="galeria.html">Galería</a>
+                <a class="nav-link text-slate-700 text-sm font-medium hover:text-primary transition-colors no-underline" href="ubicacion.html">Ubicación</a>
+                <a class="nav-link text-slate-700 text-sm font-medium hover:text-primary transition-colors no-underline" href="reserva.html">Reservas</a>
+            </nav>
+            <button class="flex items-center justify-center rounded-full p-2 text-slate-600 hover:bg-primary/10 hover:text-primary">
+                <span class="material-symbols-outlined">share</span>
+            </button>
+            <button class="flex items-center justify-center rounded-full p-2 text-slate-600 hover:bg-primary/10 hover:text-primary">
+                <span class="material-symbols-outlined">favorite</span>
+            </button>
+            <a href="reserva.html" class="hidden sm:block rounded-lg bg-primary px-6 py-2 text-sm font-bold text-white transition-opacity hover:opacity-90 no-underline">Reservar ahora</a>
+            <button id="mobile-toggle" class="md:hidden flex items-center justify-center size-10 rounded-lg hover:bg-primary/10 transition-colors">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile menu overlay -->
+<div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/50 z-[60]"></div>
+<div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-white shadow-2xl z-[70] p-8 flex flex-col gap-6">
+    <div class="flex justify-between items-center mb-4">
+        <span class="text-lg font-bold text-primary">Menú</span>
+        <button id="mobile-close" class="size-10 flex items-center justify-center rounded-lg hover:bg-primary/10">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+    <a href="index.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-slate-700 font-medium no-underline">
+        <span class="material-symbols-outlined">home</span> Inicio
+    </a>
+    <a href="galeria.html" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/10 text-primary font-bold no-underline">
+        <span class="material-symbols-outlined">photo_library</span> Galería
+    </a>
+    <a href="ubicacion.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-slate-700 font-medium no-underline">
+        <span class="material-symbols-outlined">location_on</span> Ubicación
+    </a>
+    <a href="reserva.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-slate-700 font-medium no-underline">
+        <span class="material-symbols-outlined">calendar_today</span> Reservas
+    </a>
+    <div class="mt-auto">
+        <a href="reserva.html" class="flex items-center justify-center w-full py-3 bg-primary text-white font-bold rounded-lg no-underline">Reservar Ahora</a>
+    </div>
+</div>
+
+<!-- Swiper Lightbox Overlay -->
+<div class="lightbox fixed inset-0 bg-black/95 z-[100] hidden flex-col items-center justify-center p-4" id="lightbox">
+    <button class="absolute right-6 top-6 text-white hover:text-primary transition-colors z-[110]" onclick="closeLightbox()">
+        <span class="material-symbols-outlined text-4xl">close</span>
+    </button>
+    
+    <!-- Swiper -->
+    <div class="swiper mySwiper w-full max-w-6xl h-[80vh] rounded-xl overflow-hidden shadow-2xl">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide flex items-center justify-center"><img src="img/fachada.jpg" class="max-h-full max-w-full object-contain rounded-lg shadow-xl"></div>
+        <div class="swiper-slide flex items-center justify-center"><img src="img/jardin_pozo.jpg" class="max-h-full max-w-full object-contain rounded-lg shadow-xl"></div>
+        <div class="swiper-slide flex items-center justify-center"><img src="img/olivos_jardin.jpg" class="max-h-full max-w-full object-contain rounded-lg shadow-xl"></div>
+        <div class="swiper-slide flex items-center justify-center"><img src="img/pozo_rustico.jpg" class="max-h-full max-w-full object-contain rounded-lg shadow-xl"></div>
+        <div class="swiper-slide flex items-center justify-center"><img src="img/horno.jpg" class="max-h-full max-w-full object-contain rounded-lg shadow-xl"></div>
+      </div>
+      <div class="swiper-button-next text-white/70 hover:text-white transition-colors"></div>
+      <div class="swiper-button-prev text-white/70 hover:text-white transition-colors"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<main class="mx-auto w-full max-w-7xl flex-grow px-4 py-8 sm:px-6 lg:px-8">
+
+<!-- Hero Title -->
+<div class="mb-8 fade-in">
+    <h2 class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">Finca Son Creixell</h2>
+    <div class="mt-2 flex items-center gap-2 text-slate-600">
+        <span class="material-symbols-outlined text-primary text-sm">location_on</span>
+        <span class="text-base">Mallorca, Islas Baleares, España</span>
+    </div>
+</div>
+
+<!-- Image Grid Layout -->
+<div class="grid grid-cols-1 gap-4 md:grid-cols-4 md:grid-rows-2 h-[400px] md:h-[600px] mb-12 fade-in">
+    <div class="md:col-span-2 md:row-span-2 overflow-hidden rounded-xl bg-slate-200 cursor-pointer group" onclick="openLightbox(0)">
+        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('img/fachada.jpg')"></div>
+    </div>
+    <div class="hidden md:block overflow-hidden rounded-xl bg-slate-200 cursor-pointer group" onclick="openLightbox(1)">
+        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('img/jardin_pozo.jpg')"></div>
+    </div>
+    <div class="hidden md:block overflow-hidden rounded-xl bg-slate-200 cursor-pointer group" onclick="openLightbox(2)">
+        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('img/olivos_jardin.jpg')"></div>
+    </div>
+    <div class="hidden md:block overflow-hidden rounded-xl bg-slate-200 cursor-pointer group" onclick="openLightbox(3)">
+        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('img/pozo_rustico.jpg')"></div>
+    </div>
+    <div class="hidden md:block overflow-hidden rounded-xl bg-slate-200 relative cursor-pointer group" onclick="openLightbox(4)">
+        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('img/horno.jpg')"></div>
+        <button class="absolute bottom-4 right-4 flex items-center gap-2 rounded-lg bg-white/90 px-4 py-2 text-sm font-bold text-slate-900 shadow-lg backdrop-blur hover:bg-white transition-all transform hover:-translate-y-1" onclick="event.stopPropagation(); openLightbox(0);">
+            <span class="material-symbols-outlined text-base">grid_view</span> Mostrar todas las fotos
+        </button>
+    </div>
+</div>
+
+<div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+    <!-- Content Section -->
+    <div class="lg:col-span-2">
+        <section class="mb-12 fade-in">
+            <h3 class="text-2xl font-bold text-slate-900">Sobre este retiro histórico</h3>
+            <p class="mt-4 text-lg leading-relaxed text-slate-600">
+                Descubra la auténtica esencia de Mallorca en Son Creixell, una majestuosa propiedad con orígenes en el siglo XVII. Esta finca ha sido meticulosamente renovada para ofrecer el máximo confort contemporáneo sin perder su alma rústica tradicional.
+            </p>
+            <p class="mt-4 text-lg leading-relaxed text-slate-600">
+                Ubicada en una extensa finca de 70 hectáreas, los huéspedes pueden disfrutar de la serenidad del campo mallorquín y conocer a los habitantes locales de la propiedad: nuestras ovejas y cerdos que pastan libremente por el terreno.
+            </p>
+        </section>
+
+        <hr class="mb-12 border-primary/10"/>
+
+        <!-- Amenities Section -->
+        <section class="fade-in">
+            <h3 class="mb-6 text-2xl font-bold text-slate-900">Lo que ofrece este lugar</h3>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div class="flex items-center gap-4 rounded-lg border border-primary/10 bg-white/50 p-4 hover:shadow-md transition-shadow">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <span class="material-symbols-outlined">bed</span>
+                    </div>
+                    <div>
+                        <p class="font-bold">4 Dormitorios</p>
+                        <p class="text-sm text-slate-500">Espacios amplios y rústicos</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 rounded-lg border border-primary/10 bg-white/50 p-4 hover:shadow-md transition-shadow">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <span class="material-symbols-outlined">bathroom</span>
+                    </div>
+                    <div>
+                        <p class="font-bold">4 Baños</p>
+                        <p class="text-sm text-slate-500">Completamente equipados</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 rounded-lg border border-primary/10 bg-white/50 p-4 hover:shadow-md transition-shadow">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <span class="material-symbols-outlined">countertops</span>
+                    </div>
+                    <div>
+                        <p class="font-bold">Cocina completa</p>
+                        <p class="text-sm text-slate-500">Totalmente equipada</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 rounded-lg border border-primary/10 bg-white/50 p-4 hover:shadow-md transition-shadow">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <span class="material-symbols-outlined">pool</span>
+                    </div>
+                    <div>
+                        <p class="font-bold">Piscina privada</p>
+                        <p class="text-sm text-slate-500">Con vistas panorámicas</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 rounded-lg border border-primary/10 bg-white/50 p-4 hover:shadow-md transition-shadow">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <span class="material-symbols-outlined">landscape</span>
+                    </div>
+                    <div>
+                        <p class="font-bold">Finca de 70 Hectáreas</p>
+                        <p class="text-sm text-slate-500">Naturaleza pura y privacidad</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 rounded-lg border border-primary/10 bg-white/50 p-4 hover:shadow-md transition-shadow">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <span class="material-symbols-outlined">pets</span>
+                    </div>
+                    <div>
+                        <p class="font-bold">Animales locales</p>
+                        <p class="text-sm text-slate-500">Ovejas y cerdos de la finca</p>
+                    </div>
+                </div>
+            </div>
+            <a href="ubicacion.html" class="mt-8 inline-flex items-center gap-2 rounded-lg border-2 border-slate-900 px-6 py-3 text-sm font-bold transition-colors hover:bg-slate-900 hover:text-white no-underline text-slate-900">
+                Ver todos los servicios
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+        </section>
+    </div>
+
+    <!-- Sidebar / Booking Card -->
+    <div class="lg:sticky lg:top-28 h-fit fade-in">
+        <div class="rounded-xl border border-primary/10 bg-white p-6 shadow-xl">
+            <div class="flex items-end justify-between mb-6">
+                <div>
+                    <span class="text-2xl font-black text-slate-900">€450</span>
+                    <span class="text-slate-500"> / noche</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-primary text-sm">star</span>
+                    <span class="font-bold">4.98</span>
+                    <span class="text-slate-500">(124 reseñas)</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 overflow-hidden rounded-lg border border-slate-200">
+                <div class="border-b border-r border-slate-200 p-3">
+                    <label class="text-[10px] font-bold uppercase text-slate-500">Llegada</label>
+                    <input type="date" class="w-full text-sm border-none p-0 mt-1 focus:ring-0 bg-transparent"/>
+                </div>
+                <div class="border-b border-slate-200 p-3">
+                    <label class="text-[10px] font-bold uppercase text-slate-500">Salida</label>
+                    <input type="date" class="w-full text-sm border-none p-0 mt-1 focus:ring-0 bg-transparent"/>
+                </div>
+                <div class="col-span-2 p-3">
+                    <label class="text-[10px] font-bold uppercase text-slate-500">Huéspedes</label>
+                    <select class="w-full text-sm border-none p-0 mt-1 focus:ring-0 bg-transparent">
+                        <option>1 persona</option>
+                        <option>2 personas</option>
+                        <option>3 personas</option>
+                        <option>4 personas</option>
+                        <option>5 personas</option>
+                        <option>6 personas</option>
+                        <option>7 personas</option>
+                        <option selected>Hasta 8 personas</option>
+                    </select>
+                </div>
+            </div>
+            <a href="reserva.html" class="mt-6 w-full rounded-lg bg-primary py-4 text-center font-bold text-white shadow-lg transition-transform hover:scale-[1.02] active:scale-95 block no-underline">Consultar disponibilidad</a>
+            <p class="mt-4 text-center text-xs text-slate-500">Aún no se te cobrará nada</p>
+            <div class="mt-6 space-y-3">
+                <div class="flex justify-between text-sm">
+                    <span class="underline text-slate-600">450 € x 7 noches</span>
+                    <span>€3,150</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                    <span class="underline text-slate-600">Gastos de limpieza</span>
+                    <span>€120</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                    <span class="underline text-slate-600">Comisión de servicio</span>
+                    <span>€85</span>
+                </div>
+                <hr class="border-slate-200"/>
+                <div class="flex justify-between font-bold">
+                    <span>Total</span>
+                    <span>€3,355</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+<!-- Location Preview Section -->
+<section class="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 border-t border-primary/10 fade-in">
+    <h3 class="mb-6 text-2xl font-bold text-slate-900">Dónde estarás</h3>
+    <div class="relative h-[400px] w-full overflow-hidden rounded-xl bg-slate-200 cursor-pointer group" onclick="window.location.href='ubicacion.html'">
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYk9HO481-Ah5oyl5BHlY88kzs50z4Tfj8faY5dQ00U2OijiDnqzWeqRP_zxCJTEd8Gm_mNffuYVWbYhMyiFo2uXqZTF8YuWKjDiDoK_ZLcuD2l4FlC-uh6rEnZXNaKn-Cm_iSBdo4WGgX8cu8qde_i9SpjoKKOnhtyEYincgWuSEQoW2fwnECLA5mpwf6G02g1jqtGKK7FK6hNItofc0opGTo27tJJAkvLLcOZwcfHzSOKnKZNE5qYCIaPcWYrefTSn1AJNOVq5s')"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white shadow-2xl ring-8 ring-primary/20">
+                <span class="material-symbols-outlined">home</span>
+            </div>
+        </div>
+    </div>
+    <p class="mt-4 text-slate-600 font-medium">Cerca de Sineu, Mallorca, España</p>
+</section>
+
+<!-- Footer -->
+<footer class="mt-12 border-t border-primary/10 bg-white py-12">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+            <p class="text-sm text-slate-500">© 2025 Finca Son Creixell. Todos los derechos reservados.</p>
+            <div class="flex gap-6 text-sm font-medium text-slate-600">
+                <a class="hover:text-primary no-underline text-slate-600" href="index.html">Inicio</a>
+                <a class="hover:text-primary no-underline text-slate-600" href="ubicacion.html">Ubicación</a>
+                <a class="hover:text-primary no-underline text-slate-600" href="reserva.html">Reservas</a>
+            </div>
+        <!-- Legal Information Section -->
+        <div class="mt-8 pt-8 border-t border-slate-100 text-[10px] leading-relaxed text-slate-400">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div class="space-y-2">
+                    <p><strong>Registro autonómico (Illes Balears):</strong> ETV/1387</p>
+                    <p><strong>Registro nacional (NRUA):</strong> ESFCTU00000701100048885200000000000000000000</p>
+                    <p><strong>Condiciones de uso:</strong> el usuario se compromete a utilizar este sitio y su contenido de forma lícita y sin causar daños.</p>
+                </div>
+                <div class="space-y-2">
+                    <p><strong>Propiedad intelectual:</strong> los contenidos (textos, imágenes y marcas) son titularidad del explotador o de terceros autorizados; queda prohibida su reproducción sin autorización.</p>
+                    <p><strong>Responsabilidad:</strong> el titular no se responsabiliza del uso indebido del sitio ni de interrupciones del servicio por causas técnicas o de terceros.</p>
+                    <p><strong>Legislación aplicable y jurisdicción:</strong> España; para cualquier controversia, las partes se someten a los Juzgados y Tribunales competentes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+<script src="js/main.js"></script>
+<script>
+    let swiperInstance = null;
+
+    function openLightbox(index) {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+        
+        index = parseInt(index) || 0;
+        
+        // Timeout to allow the browser to paint and calculate the true layout dimensions
+        setTimeout(() => {
+            if (!swiperInstance) {
+                swiperInstance = new Swiper(".mySwiper", {
+                    observer: true,
+                    observeParents: true,
+                    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+                    pagination: { el: ".swiper-pagination", clickable: true },
+                    keyboard: { enabled: true },
+                    initialSlide: index,
+                    loop: true,
+                    effect: "coverflow",
+                    grabCursor: true,
+                    centeredSlides: true,
+                    slidesPerView: "auto",
+                    coverflowEffect: {
+                        rotate: 50,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                        slideShadows: true,
+                    }
+                });
+            } else {
+                swiperInstance.update();
+                swiperInstance.slideToLoop(index, 0);
+            }
+        }, 50);
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+    }
+</script>
+</body>
+</html>
