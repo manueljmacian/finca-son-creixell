@@ -335,18 +335,30 @@ function handleSubmit(e) {
     })
     .then(response => response.json())
     .then(data => {
-        // Show success animation
-        form.style.display = 'none';
-        form.previousElementSibling.style.display = 'none'; 
-        document.getElementById('form-success').classList.add('active');
+        if (data.success === "false" || data.success === false) {
+            console.error("FormSubmit rechaza:", data);
+            btn.innerHTML = '<span class="material-symbols-outlined">mark_email_unread</span> Revisa tu correo';
+            alert("AVISO DE FORMSUBMIT: Te han enviado un correo a fincasoncreixell@gmail.com. Por favor, revisa tu buzón y pulsa en 'Activate' en ese correo para activar el formulario. Una vez activado, podrás usarlo sin problemas.");
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined">send</span> Enviar Solicitud de Reserva';
+                btn.disabled = false;
+            }, 6000);
+        } else {
+            // Show success animation
+            form.style.display = 'none';
+            form.previousElementSibling.style.display = 'none'; 
+            document.getElementById('form-success').classList.add('active');
+            document.getElementById('form-success').style.display = 'flex';
+        }
     })
     .catch(error => {
         console.error('Error al enviar el formulario:', error);
-        btn.innerHTML = '<span class="material-symbols-outlined">error</span> Error al enviar';
+        btn.innerHTML = '<span class="material-symbols-outlined">error</span> Error de conexión';
+        alert("Parece que hubo un error de conexión al enviar. Si estás probando la página guardada en tu ordenador en local (fuera la página publicada), los navegadores pueden bloquear el envío por seguridad. Por favor, pruébalo abriendo la web pública fincasoncreixell.com o desactiva los bloqueadores de anuncios (tipo AdBlock).");
         setTimeout(() => {
             btn.innerHTML = '<span class="material-symbols-outlined">send</span> Enviar Solicitud de Reserva';
             btn.disabled = false;
-        }, 3000);
+        }, 8000);
     });
 
     return false;
