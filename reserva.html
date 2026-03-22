@@ -315,11 +315,39 @@ function handleSubmit(e) {
     btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> Procesando...';
     btn.disabled = true;
 
-    setTimeout(() => {
+    // Send the actual email using FormSubmit.co AJAX API
+    fetch("https://formsubmit.co/ajax/fincasoncreixell@gmail.com", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            Asunto: "Nueva Solicitud de Reserva - Finca Son Creixell",
+            Nombre: document.getElementById('nombre').value,
+            Email: document.getElementById('email').value,
+            Fecha_Entrada: document.getElementById('fecha-entrada').value,
+            Fecha_Salida: document.getElementById('fecha-salida').value,
+            Huespedes: document.getElementById('huespedes').value,
+            Telefono: document.getElementById('telefono').value,
+            Mensaje: document.getElementById('mensaje').value
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Show success animation
         form.style.display = 'none';
         form.previousElementSibling.style.display = 'none'; 
         document.getElementById('form-success').classList.add('active');
-    }, 1500);
+    })
+    .catch(error => {
+        console.error('Error al enviar el formulario:', error);
+        btn.innerHTML = '<span class="material-symbols-outlined">error</span> Error al enviar';
+        setTimeout(() => {
+            btn.innerHTML = '<span class="material-symbols-outlined">send</span> Enviar Solicitud de Reserva';
+            btn.disabled = false;
+        }, 3000);
+    });
 
     return false;
 }
