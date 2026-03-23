@@ -72,11 +72,10 @@
             </div>
 
             <!-- Booking Form -->
-            <form id="booking-form" action="https://formsubmit.co/fincasoncreixell@gmail.com" method="POST" class="space-y-6" onsubmit="return validateForm(event)">
-                <input type="hidden" name="_next" value="https://fincasoncreixell.com/reserva.html?success=true">
-                <input type="hidden" name="_subject" value="Nueva Solicitud de Reserva - Finca Son Creixell">
-                <input type="hidden" name="_captcha" value="true">
-                <input type="hidden" name="_template" value="table">
+            <form id="booking-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-6" onsubmit="return validateForm(event)">
+                <input type="hidden" name="access_key" value="efc32725-19d5-41c6-933b-e89a24dd06bb">
+                <input type="hidden" name="redirect" value="https://fincasoncreixell.com/reserva.html?success=true">
+                <input type="hidden" name="subject" value="Nueva Solicitud de Reserva - Finca Son Creixell">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="flex flex-col gap-2">
                         <label class="text-sm font-semibold text-slate-700" for="nombre">Nombre Completo *</label>
